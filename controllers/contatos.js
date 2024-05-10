@@ -11,11 +11,11 @@ router.post("/", async (req, res) => {
 
     var data = req.body;
 
-    await db.solicitacaoContato.create(data).then((dataSolicitation) => {
+    await db.contatos.create(data).then((dataContato) => {
         return res.json({
             error: false,
             message: "Formulário enviado com sucesso!",
-            data: dataSolicitation 
+            data: dataContato 
         });
     }).catch(error => {
         console.error("Erro ao criar solicitação:", error);
