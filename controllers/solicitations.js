@@ -11,7 +11,7 @@ router.post("/", async (req, res) => {
 
     var data = req.body;
 
-    await db.Solicitations.create(data).then((dataSolicitation) => {
+    await db.solicitacaoContato.create(data).then((dataSolicitation) => {
         return res.json({
             error: false,
             message: "Formulário enviado com sucesso!",
