@@ -17,6 +17,10 @@ app.use(cors());
 const contatos = require("../controllers/contatos");
 app.use('/contato', contatos);
 
-app.listen(8080, () => {
-    console.log("Servidor iniciado na porta 8080: http://localhost:8080");
+sequelize.sync().then(() => {
+    app.listen(8080, () => {
+        console.log("Servidor iniciado na porta 8080: http://localhost:8080");
+    });
 });
+
+
