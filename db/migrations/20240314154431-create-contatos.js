@@ -13,24 +13,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       fullname: {
-        allowNull: false,
         type: Sequelize.STRING
       },
       email: {
-        allowNull: false,
         type: Sequelize.STRING
       },
       phone: {
-        allowNull: false,
         type: Sequelize.STRING
       },
       content: {
-        allowNull: false,
         type: Sequelize.STRING
-      },
-      status: {
-        type: Sequelize.STRING,
-        defaultValue: 'pendente'
       },
       createdAt: {
         allowNull: false,
